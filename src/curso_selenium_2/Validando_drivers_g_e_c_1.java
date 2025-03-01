@@ -1,5 +1,6 @@
 package curso_selenium_2;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 // import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -18,6 +19,21 @@ public class Validando_drivers_g_e_c_1 {
 			  System.out.println(driver_edge.getCurrentUrl());
 			  // metodo basico 4, close() cierra el navegador
 			  // driver_edge.close();
+			  
+			  // encontrar elemento por id
+			  driver_edge.findElement(By.id("APjFqb"));
+			  // encontrar el elemento por class name
+			  driver_edge.findElement(By.className("gNO89b"));
+			// encontrar elemento por name
+			  driver_edge.findElement(By.name("btnI"));
+			// encontrar elemento por link test
+			  driver_edge.findElement(By.linkText("Sobre Google"));
+			  // encontrar el elemento por link test parcial
+			  driver_edge.findElement(By.partialLinkText("Sobre"));  
+			// encontrar elemento por xpath
+			  driver_edge.findElement(By.xpath("/html/body/div[1]/div[6]/div/div[2]/div[3]"));  
+			  
+			  
 			  // metodo basico 5, quit() termina la sesion del driver
 			  driver_edge.quit();;
 			  
