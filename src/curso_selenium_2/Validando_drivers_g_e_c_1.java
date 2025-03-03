@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 // import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
+import org.openqa.selenium.support.locators.RelativeLocator;
+
 
 public class Validando_drivers_g_e_c_1 {
 
@@ -20,8 +22,9 @@ public class Validando_drivers_g_e_c_1 {
 			  // metodo basico 4, close() cierra el navegador
 			  // driver_edge.close();
 			  
+			  // Localizadores tradicionales
 			  // encontrar elemento por id
-			  driver_edge.findElement(By.id("APjFqb"));
+			 /* driver_edge.findElement(By.id("APjFqb"));
 			  // encontrar el elemento por class name
 			  driver_edge.findElement(By.className("gNO89b"));
 			// encontrar elemento por name
@@ -31,11 +34,20 @@ public class Validando_drivers_g_e_c_1 {
 			  // encontrar el elemento por link test parcial
 			  driver_edge.findElement(By.partialLinkText("Sobre"));  
 			// encontrar elemento por xpath
-			  driver_edge.findElement(By.xpath("/html/body/div[1]/div[6]/div/div[2]/div[3]"));  
+			  driver_edge.findElement(By.xpath("/html/body/div[1]/div[6]/div/div[2]/div[3]"));   */  
+			  
+			  // Para saltar primera pantalla
+			  driver_edge.findElement(By.xpath("/html/body/div[2]/div[2]/div[3]/span/div/div/div/div[3]/div[1]/button[2]")).click();	
+			  
+			
+			  // Localizadores relativos (amigables)
+			  //driver_edge.findElement(RelativeLocator.with(By.tagName("a")).toLeftOf(By.className("gb_F"))).click();
+			  // driver_edge.findElement(RelativeLocator.with(By.tagName("a")).toRightOf(By.className("gb_X"))).click();
+			  driver_edge.findElement(RelativeLocator.with(By.tagName("a")).toLeftOf(By.className("gb_F")).toRightOf(By.className("gb_X"))).click();
 			  
 			  
 			  // metodo basico 5, quit() termina la sesion del driver
-			  driver_edge.quit();;
+			  // driver_edge.quit();;
 			  
 			  
 		// validando chrome driver
