@@ -63,12 +63,12 @@ public class Validando_drivers_g_e_c_1 {
 			  driver_edge.findElement(By.className("Gdd5U")); */
 			  
 			  // Explicit wait   Mas recomendado
-			  driver_edge.get("https://www.google.com");
+			  /* driver_edge.get("https://www.google.com");
 			  driver_edge.findElement(By.xpath("/html/body/div[2]/div[2]/div[3]/span/div/div/div/div[3]/div[1]/button[2]")).click();
 			  WebElement image = driver_edge.findElement(By.className("gLFyf"));
 			  Wait<WebDriver> wait = new WebDriverWait(driver_edge,Duration.ofSeconds(5)); 	
 			  wait.until(imageshow->image.isDisplayed());
-			  driver_edge.findElement(By.className("gLFyf")).sendKeys("selenium"); 
+			  driver_edge.findElement(By.className("gLFyf")).sendKeys("selenium"); */ 
 			  
 			  // fluent wait
 			  /* driver_edge.get("https://www.google.com");
@@ -83,15 +83,25 @@ public class Validando_drivers_g_e_c_1 {
 			    return true;
 			  });   */
 			  
+			 
+			  // INTERACCIONES
+			  driver_edge.get("https://www.amazon.com");
+			  //send keys
+			  driver_edge.findElement(By.id("twotabsearchtextbox")).sendKeys("nintendo switch");
+			  driver_edge.findElement(By.id("nav-search-submit-button")).click();
+			  // clear
+			  driver_edge.findElement(By.id("twotabsearchtextbox")).clear();
+			  // click
+			  driver_edge.findElement(By.id("nav-hamburger-menu")).click();
 			  
 			  // metodo basico 5, quit() termina la sesion del driver
 			  // driver_edge.quit();;
 			  
 			  
 		// validando chrome driver
-		// System.setProperty("webdriver.chrome.driver", "C:\\Users\\Gerardo Jimenez Diez\\drivers_webs\\chromedriver\\chromedriver.exe");
-		// WebDriver driver_chrome = new ChromeDriver();
-		// driver_chrome.get("https://www.google.com");
+		/* System.setProperty("webdriver.chrome.driver", "C:\\Users\\Gerardo Jimenez Diez\\drivers_webs\\chromedriver\\chromedriver.exe");
+		WebDriver driver_chrome = new ChromeDriver();
+		driver_chrome.get("https://www.google.com"); */ 
 		
 		//validando geckodrive
 		 // System.setProperty("webdriver.gecko.driver", "E:\\Canal Nicolas Alvarez\\nuevo curso avanzado de selenium con java\\drivers\\geckodriver\\geckodriver.exe");
